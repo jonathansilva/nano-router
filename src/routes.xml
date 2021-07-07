@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+    <route>
+        <path>/</path>
+        <method>GET</method>
+        <callback>App\Rest\Callback\Home</callback>
+    </route>
+
+    <route>
+        <path>/auth</path>
+        <method>POST</method>
+        <callback>App\Rest\Callback\Login</callback>
+        <middlewares>
+            <middleware>App\Rest\Middleware\TestMiddleware</middleware>
+        </middlewares>
+    </route>
+</routes>

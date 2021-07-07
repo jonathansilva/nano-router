@@ -1,0 +1,18 @@
+{
+    "name": "jonathansilva/nano-router",
+    "description": "Route library for php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Silva",
+            "email": "33843748+jonathansilva@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
