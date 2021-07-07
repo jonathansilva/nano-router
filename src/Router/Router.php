@@ -2,6 +2,8 @@
 
 namespace App\Router;
 
+use ReflectionFunction;
+
 class Router
 {
     private $request;
@@ -53,7 +55,9 @@ class Router
 
         $callback = (!$callback) ? $this->routeError : $callback;
 
-        call_user_func_array($callback, [
+        $reflector = new ReflectionFunction($callback);
+
+        return $reflector->invokeArgs([
             array_merge($_GET, $_POST)
         ]);
     }
