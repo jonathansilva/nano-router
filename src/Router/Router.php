@@ -20,6 +20,11 @@ class Router
         $this->addRoute('GET', $path, $callback);
     }
 
+    public function post(string $path, $callback): void
+    {
+        $this->addRoute('POST', $path, $callback);
+    }
+
     public function notFound($callback): void
     {
         $this->routeError = $callback;

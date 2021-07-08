@@ -16,10 +16,6 @@ $app->get('/', function() {
     echo "Home";
 });
 
-$app->get('/teste', function() {
-    echo "Teste";
-});
-
 //$app->load(__DIR__.'/../src/routes.xml');
 
 $app->start();
